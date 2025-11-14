@@ -1,15 +1,19 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("@chainlink/env-enc").config();
 
-const { ALCHEMY_API_KEY, PRIVATE_KEY } = process.env;
+const { SEPOLIA_URL, PRIVATE_KEY, SEPOLIA_API_KEY } = process.env;
 
-/** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.28",
   networks: {
     sepolia: {
-      url: ALCHEMY_API_KEY,
+      url: SEPOLIA_URL,
       accounts: [PRIVATE_KEY],
     }
-  }
+  },
+  etherscan: {
+    apiKey: {
+      sepolia: SEPOLIA_API_KEY,
+    },
+  },
 };
