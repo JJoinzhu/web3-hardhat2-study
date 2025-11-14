@@ -17,6 +17,9 @@ importers:
       '@nomicfoundation/hardhat-toolbox':
         specifier: ^6.1.0
         version: 6.1.0(1699ab04401476b718f1e2811891308d)
+      '@nomicfoundation/hardhat-verify':
+        specifier: ^2.1.3
+        version: 2.1.3(hardhat@2.27.0(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.9.3))(typescript@5.9.3))
       hardhat:
         specifier: ^2.27.0
         version: 2.27.0(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.9.3))(typescript@5.9.3)

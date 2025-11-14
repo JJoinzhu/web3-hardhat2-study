@@ -1,4 +1,5 @@
 const { ethers } = require("hardhat");
+require("@nomicfoundation/hardhat-verify");
 
 async function main() {
     // create factory
@@ -8,6 +9,13 @@ async function main() {
     const fundMe = await fundMeFactory.deploy(10);
     await fundMe.waitForDeployment();
     console.log(`Successfully, FundMe deployed to: ${fundMe.target}`);
+
+    await hre.run("verify:verify", {
+        address: fundMe.target,
+        constructorArguments: [
+            10,
+        ],
+    });
 }
 
 main().then().catch((error) => {

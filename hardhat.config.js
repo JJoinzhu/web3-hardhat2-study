@@ -12,8 +12,11 @@ module.exports = {
     }
   },
   etherscan: {
-    apiKey: {
-      sepolia: SEPOLIA_API_KEY,
-    },
+    apiKey: SEPOLIA_API_KEY
   },
+  sourcify: {
+    // Disabled by default
+    // Doesn't need an API key
+    enabled: false
+  }
 };
